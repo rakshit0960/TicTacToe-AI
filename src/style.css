@@ -43,27 +43,27 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    background-color: rgba(34, 40, 49, .95);
+    color: #00ADB5;
     font-size: 4.5rem;
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
 .game-end button {
     font-size: 2.5rem;
-    background-color: #fff;
-    columns: #000;
+    background-color: #00ADB5;
+    color: #222831;
     padding: 0.15em 0.50em;
     border: 1px solid;
 }
 
 .game-end button:hover {
-    background-color: gray;
-    color: #fff;
+    background-color: #393E46;
+    color: #EEEEEE;
 }
 
 .game-end.show {
@@ -73,4 +73,18 @@ body {
 .cell .hover-element {
     color: rgba(148, 147, 147, 0.6);
     z-index: -1;
+}
+
+.reload-icon {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.reload-icon:hover {
+    background-color: #171a20;
 }
