@@ -11,7 +11,6 @@ body {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #222831;
-    color: #EEEEEE;
 }
 
 .cell-contaner {
@@ -22,6 +21,7 @@ body {
     grid-template-rows: repeat(3, 1fr);
     font-size: 70px;
     font-weight: bolder;
+    color: #EEEEEE;
 }
 
 .cell {
@@ -68,4 +68,9 @@ body {
 
 .game-end.show {
     display: flex;
+}
+
+.cell .hover-element {
+    color: rgba(148, 147, 147, 0.6);
+    z-index: -1;
 }
