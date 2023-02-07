@@ -1,5 +1,6 @@
 const X = 'X';
 const O = 'O';
+const RestartIcon = document.querySelector(".reload-icon")
 const RestartBtn = document.querySelector(".game-end .restart-btn")
 const GameEndScreen = document.querySelector(".game-end");
 const GameEndTextElement = document.querySelector(".game-end .game-end-text");
@@ -10,12 +11,19 @@ const WinningCombinations = [
     [0, 4, 8], [2, 4, 6]
 ]
 
+const hoverElement = document.createElement("div");
+hoverElement.classList.add("hover-element");
+
 let currentPlayer;
 let movesLeft;
 
-start();
-
 RestartBtn.onclick = e => { start() }
+RestartIcon.onclick =  e => { start() }
+cells.forEach(cell => { cell.addEventListener("mouseover", cellMouseOver) });
+cells.forEach(cell => { cell.addEventListener("mouseout", cellMouseOut) });
+
+
+start();
 function start() {
     currentPlayer = X
     movesLeft = 9
@@ -30,6 +38,7 @@ function start() {
 function cellClik(e) {
     const cell = e.target;
     cell.textContent = currentPlayer;
+    removeChildElement(cell, hoverElement);
     
     if(checkWin()) {
         gameEnd(draw=false);
@@ -47,7 +56,30 @@ function checkWin() {
     })
 }
 function gameEnd(draw) {
-    let message = (draw) ? "~DRAW~" : `~${currentPlayer} WON~`;
+    let message = (draw) ? "DRAW!" : `${currentPlayer} WON!`;
     GameEndTextElement.textContent = message;
     GameEndScreen.classList.add("show");    
+}
+
+
+function cellMouseOver(e) {
+    const cell = e.target;
+    if (cell.textContent != "") return;
+    hoverElement.textContent = currentPlayer;
+    cell.appendChild(hoverElement);
+
+}
+function cellMouseOut(e) {
+    const cell = e.target;
+    removeChildElement(cell, hoverElement);
+}
+// remove childElement if Exist
+function removeChildElement(element, childElement) {
+    // check if hoverElement is a child of cell
+    let is_present = 
+            Array.from(element.children).some(child => {
+            return child == childElement;
+        })
+    if (is_present)
+        element.removeChild(childElement)
 }
