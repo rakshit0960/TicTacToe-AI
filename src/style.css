@@ -11,6 +11,7 @@ body {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #222831;
+    color: #EEEEEE;
 }
 
 .cell-contaner {
@@ -87,4 +88,48 @@ body {
 
 .reload-icon:hover {
     background-color: #171a20;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.menu .container {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu .container .menu-option{
+    padding: 20px 40px;
+    width: 400px;
+    border: 1px solid #393E46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.menu .container .menu-option:hover {
+    background-color: #171a20;
+}
+
+.menu .container .menu-option img {
+    width: 64px;
+    height: 64px;
+}
+
+.menu.hide {
+    display: none;
 }
