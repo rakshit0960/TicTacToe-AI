@@ -10,12 +10,12 @@ tic tac toe game With an AI implimented using minmax algorithm
 ## Screen Shorts:
 
 ### Menu
-![Menu](screenshort/Menu.PNG)
+![Menu](ScreenShort/Menu.PNG)
 
 ### Game
-![Game](screenshort/Game.PNG)
-![hover](screenshort/Hover.PNG)
+![Game](ScreenShort/Game.PNG)
+![hover](ScreenShort/Hover.PNG)
 
 ### Game End
-![winning](screenshort/Winngin.PNG)
-![Draw](screenshort/Draw.PNG)
+![winning](ScreenShort/Winngin.PNG)
+![Draw](ScreenShort/Draw.PNG)
