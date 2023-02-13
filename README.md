@@ -13,9 +13,9 @@ tic tac toe game With an AI implimented using minmax algorithm
 ![Menu](screenshort/Menu.PNG)
 
 ### Game
-![Game](screenshort/game1.PNG)
+![Game](screenshort/Game.PNG)
 ![hover](screenshort/Hover.PNG)
 
 ### Game End
-![winning](screenshort/winnig.PNG)
+![winning](screenshort/Winngin.PNG)
 ![Draw](screenshort/Draw.PNG)
